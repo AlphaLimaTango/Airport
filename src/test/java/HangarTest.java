@@ -24,5 +24,10 @@ public class HangarTest {
         assertEquals(true, hangar.addPlane(plane));
     }
 
+    @Test
+    public void canCountPlanes(){
+        hangar.addPlane(plane);
+        assertEquals(1, hangar.getPlaneCount());
+    }
 
 }
