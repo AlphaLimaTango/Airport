@@ -16,4 +16,9 @@ public class PassengerTest {
     public void hasName(){
         assertEquals("Jen", passenger1.getName());
     }
+
+    @Test
+    public void startsWithNoTickets(){
+        assertEquals(0, passenger1.getTicketCount());
+    }
 }

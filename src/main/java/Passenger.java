@@ -1,13 +1,18 @@
 public class Passenger {
 
     private String name;
-    private int ticket;
+    private int tickets;
 
     public Passenger(String name) {
         this.name = name;
+        this.tickets = tickets;
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public int getTicketCount() {
+        return this.tickets;
     }
 }
