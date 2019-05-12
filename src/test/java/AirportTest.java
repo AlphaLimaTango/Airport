@@ -11,6 +11,7 @@ public class AirportTest {
     Plane plane1;
     Plane plane2;
     Flight flight1;
+    Passenger passenger1;
 
     @Before
     public void before(){
@@ -46,7 +47,7 @@ public class AirportTest {
     public void canAddHangar(){
         airport1.addHangar(hangar1);
         airport1.addHangar(hangar2);
-        assertEquals(2, airport1.getHangerCount());
+        assertEquals(2, airport1.getHangarCount());
     }
 
     @Test
@@ -58,4 +59,14 @@ public class AirportTest {
         assertEquals(plane1, flight1.getPlane());
     }
 
+    @Test
+    public void startsWithNoTicketsSold(){
+        assertEquals(0, airport1.getTicketsSold());
+    }
+
+//    @Test
+//    public void canSellTicket(){
+//        airport1.sellTicket(Passenger passenger1, Flight flight1);
+//        assertEquals(1, airport1.getTicketsSold());
+//    }
 }

@@ -5,11 +5,13 @@ public class Airport {
     private String code;
     private ArrayList<Hangar> hangars;
     private ArrayList<Flight> flights;
+    private int ticketsSold;
 
     public Airport(String code) {
         this.code = code;
         this.hangars = new ArrayList<>();
         this.flights = new ArrayList<>();
+        this.ticketsSold = 0;
     }
 
     public String getAirportCode() {
@@ -33,16 +35,11 @@ public class Airport {
         flight.setPlane(plane);
     }
 
-    public int getHangerCount() {
-        return this.hangars.size();
-    }
-
-//    public void addPlane(Hangar hangar, Plane plane) {
-//        hangar.addPlane(plane);
-//    }
-
     public void addHangar(Hangar hangar) {
         this.hangars.add(hangar);
     }
 
+    public int getTicketsSold() {
+        return this.ticketsSold;
+    }
 }
