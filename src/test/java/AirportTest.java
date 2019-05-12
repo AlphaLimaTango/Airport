@@ -43,11 +43,17 @@ public class AirportTest {
     }
 
     @Test
-    public void canAssignPlaneToFlight(){
-        hangar1.addPlane(plane1);
-        hangar1.addPlane(plane2);
-        airport1.assignPlane(plane1, flight1);
-        assertEquals(1, airport1.getHangerCount());
+    public void canAddHangar(){
+        airport1.addHangar(hangar1);
+        airport1.addHangar(hangar2);
+        assertEquals(2, airport1.getHangerCount());
     }
+
+//    @Test
+//    public void canAssignPlaneToFlight(){
+//        airport1.addPlane(hangar1, plane1);
+//        airport1.addPlane(hangar1, plane2);
+//
+//    }
 
 }
