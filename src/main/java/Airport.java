@@ -42,4 +42,8 @@ public class Airport {
     public int getTicketsSold() {
         return this.ticketsSold;
     }
+
+    public int sellTicket(Passenger passenger, Flight flight){
+        return this.ticketsSold += 1;
+    }
 }

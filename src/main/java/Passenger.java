@@ -15,4 +15,8 @@ public class Passenger {
     public int getTicketCount() {
         return this.tickets;
     }
+
+    public int buyTicket(Flight flight) {
+        return this.tickets += 1;
+    }
 }
