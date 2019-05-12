@@ -15,4 +15,8 @@ public class Airport {
     public String getAirportCode() {
         return this.code;
     }
+
+    public int getHangarCount() {
+        return this.hangars.size();
+    }
 }
