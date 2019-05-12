@@ -9,6 +9,7 @@ public class Plane {
     public Plane(Type type, Airline airline) {
         this.type = type;
         this.airline = airline;
+        this.passengers = new ArrayList<Passenger>();
     }
 
 
@@ -18,5 +19,9 @@ public class Plane {
 
     public Airline getAirline() {
         return this.airline;
+    }
+
+    public int getPassengerCount() {
+        return this.passengers.size();
     }
 }
