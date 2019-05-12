@@ -23,4 +23,8 @@ public class Airport {
     public int getFlightCount() {
         return this.flights.size();
     }
+
+    public boolean createFlight(int flightNumber, String destination) {
+        return this.flights.add(new Flight(flightNumber, destination));
+    }
 }

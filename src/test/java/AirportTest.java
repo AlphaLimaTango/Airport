@@ -30,4 +30,11 @@ public class AirportTest {
     public void startsWithNoFlights(){
         assertEquals(0, airport1.getFlightCount());
     }
+
+    @Test
+    public void canCreateAFlight(){
+        airport1.createFlight(456, "Paris");
+        assertEquals(1, airport1.getFlightCount());
+    }
+
 }
