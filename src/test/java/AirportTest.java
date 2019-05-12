@@ -66,7 +66,7 @@ public class AirportTest {
 
     @Test
     public void canSellTicket(){
-        airport1.sellTicket(passenger1, flight1);
+        airport1.sellTicket();
         assertEquals(1, airport1.getTicketsSold());
     }
 }

@@ -43,7 +43,7 @@ public class Airport {
         return this.ticketsSold;
     }
 
-    public int sellTicket(Passenger passenger, Flight flight){
+    public int sellTicket(){
         return this.ticketsSold += 1;
     }
 }
