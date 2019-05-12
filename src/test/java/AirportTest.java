@@ -25,4 +25,9 @@ public class AirportTest {
     public void startsWithNoHangars(){
         assertEquals(0, airport1.getHangarCount());
     }
+
+    @Test
+    public void startsWithNoFlights(){
+        assertEquals(0, airport1.getFlightCount());
+    }
 }

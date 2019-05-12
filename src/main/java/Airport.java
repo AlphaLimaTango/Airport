@@ -19,4 +19,8 @@ public class Airport {
     public int getHangarCount() {
         return this.hangars.size();
     }
+
+    public int getFlightCount() {
+        return this.flights.size();
+    }
 }
