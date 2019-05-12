@@ -28,19 +28,21 @@ public class Airport {
         return this.flights.add(new Flight(flightNumber, destination));
     }
 
-    public boolean assignPlane(Plane plane, Flight flight) {
-        return this.hangars.remove(plane);
+    public void assignPlane(Plane plane, Flight flight) {
+        this.hangars.remove(plane);
+        flight.setPlane(plane);
     }
 
     public int getHangerCount() {
         return this.hangars.size();
     }
 
-    public void addPlane(Hangar hangar, Plane plane) {
-        hangar.addPlane(plane);
-    }
+//    public void addPlane(Hangar hangar, Plane plane) {
+//        hangar.addPlane(plane);
+//    }
 
     public void addHangar(Hangar hangar) {
         this.hangars.add(hangar);
     }
+
 }
