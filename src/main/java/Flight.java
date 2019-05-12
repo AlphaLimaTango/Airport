@@ -30,7 +30,11 @@ public class Flight {
         this.plane = plane;
     }
 
-    public boolean addPassenger(Passenger passenger) {
-        return this.passengers.add(passenger);
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
+
+    public int getPassengerCount() {
+        return this.passengers.size();
     }
 }
