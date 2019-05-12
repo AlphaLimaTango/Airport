@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Plane {
 
@@ -7,5 +6,13 @@ public class Plane {
     private Airline airline;
     private ArrayList<Passenger> passengers;
 
+    public Plane(Type type, Airline airline) {
+        this.type = type;
+        this.airline = airline;
+    }
 
+
+    public Type getType() {
+        return this.type;
+    }
 }
