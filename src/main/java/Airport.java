@@ -11,7 +11,7 @@ public class Airport {
         this.code = code;
         this.hangars = new ArrayList<>();
         this.flights = new ArrayList<>();
-        this.ticketsSold = 0;
+        this.ticketsSold = ticketsSold;
     }
 
     public String getAirportCode() {
@@ -43,7 +43,10 @@ public class Airport {
         return this.ticketsSold;
     }
 
-    public int sellTicket(){
-        return this.ticketsSold += 1;
+    public void sellTicket(Passenger passenger, Flight flight){
+        passenger.buyTicket(flight);
+        flight.addPassenger(passenger);
+        this.ticketsSold += 1;
     }
+
 }

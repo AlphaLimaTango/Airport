@@ -9,7 +9,6 @@ public class AirportTest {
     Hangar hangar1;
     Hangar hangar2;
     Plane plane1;
-    Plane plane2;
     Flight flight1;
     Passenger passenger1;
 
@@ -66,7 +65,9 @@ public class AirportTest {
 
     @Test
     public void canSellTicket(){
-        airport1.sellTicket();
+        airport1.sellTicket(passenger1, flight1);
         assertEquals(1, airport1.getTicketsSold());
     }
+
+
 }
