@@ -21,4 +21,9 @@ public class FlightTest {
     public void hasDestination(){
         assertEquals("Paris", flight1.getDestination());
     }
+
+    @Test
+    public void startsWithNoPlaneAssigned(){
+        assertEquals(null, flight1.getPlane());
+    }
 }
