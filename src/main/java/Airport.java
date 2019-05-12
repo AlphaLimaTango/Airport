@@ -27,4 +27,13 @@ public class Airport {
     public boolean createFlight(int flightNumber, String destination) {
         return this.flights.add(new Flight(flightNumber, destination));
     }
+
+    public void assignPlane(Plane plane, Flight flight) {
+        this.hangars.remove(plane);
+        flight.setPlane(plane);
+    }
+
+    public int getHangerCount() {
+        return this.hangars.size();
+    }
 }

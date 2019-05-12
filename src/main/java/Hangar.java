@@ -11,4 +11,8 @@ public class Hangar {
     public int getPlaneCount() {
         return this.planes.size();
     }
+
+    public boolean addPlane(Plane plane) {
+        return this.planes.add(plane);
+    }
 }

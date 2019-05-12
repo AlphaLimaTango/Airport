@@ -8,12 +8,17 @@ public class AirportTest {
     Airport airport1;
     Hangar hangar1;
     Hangar hangar2;
+    Plane plane1;
+    Plane plane2;
+    Flight flight1;
 
     @Before
     public void before(){
         airport1 = new Airport("GLA");
         hangar1 = new Hangar();
         hangar2 = new Hangar();
+        plane1 = new Plane(Type.BOEING737, Airline.DELTA);
+        flight1 = new Flight(1, "Madrid");
     }
 
     @Test
@@ -35,6 +40,14 @@ public class AirportTest {
     public void canCreateAFlight(){
         airport1.createFlight(456, "Paris");
         assertEquals(1, airport1.getFlightCount());
+    }
+
+    @Test
+    public void canAssignPlaneToFlight(){
+        hangar1.addPlane(plane1);
+        hangar1.addPlane(plane2);
+        airport1.assignPlane(plane1, flight1);
+        assertEquals(1, airport1.getHangerCount());
     }
 
 }
