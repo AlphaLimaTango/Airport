@@ -49,4 +49,13 @@ public class Airport {
         this.ticketsSold += 1;
     }
 
+    public ArrayList<Integer> numberOfPassengersOnEachFlight() {
+        ArrayList<Integer> array = null;
+        for (Hangar hangar : this.hangars) {
+            for (Plane plane : hangar.getPlanes()) {
+                array.add(plane.getPassengerCount());
+            }
+        }
+        return array;
+    }
 }

@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class AirportTest {
@@ -63,11 +65,16 @@ public class AirportTest {
         assertEquals(0, airport1.getTicketsSold());
     }
 
-    @Test
-    public void canSellTicket(){
-        airport1.sellTicket(passenger1, flight1);
-        assertEquals(1, airport1.getTicketsSold());
-    }
+//    @Test
+//    public void canSellTicket(){
+//        airport1.sellTicket(passenger1, flight1);
+//        assertEquals(1, airport1.getTicketsSold());
+//    }
 
+    @Test
+    public void numberOfPassengersBookedOntoFlights(){
+        airport1.sellTicket(passenger1, flight1);
+        assertEquals(1, airport1.numberOfPassengersOnEachFlight());
+    }
 
 }

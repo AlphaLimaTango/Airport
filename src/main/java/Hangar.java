@@ -15,4 +15,8 @@ public class Hangar {
     public boolean addPlane(Plane plane) {
         return this.planes.add(plane);
     }
+
+    public ArrayList<Plane> getPlanes() {
+        return this.planes;
+    }
 }
