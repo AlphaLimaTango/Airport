@@ -12,7 +12,13 @@ public class AirportTest {
     Hangar hangar2;
     Plane plane1;
     Flight flight1;
+    Flight flight2;
+    Flight flight3;
     Passenger passenger1;
+    Passenger passenger2;
+    Passenger passenger3;
+    Passenger passenger4;
+    Passenger passenger5;
 
     @Before
     public void before(){
@@ -21,6 +27,11 @@ public class AirportTest {
         hangar2 = new Hangar();
         plane1 = new Plane(Type.BOEING737, Airline.DELTA);
         flight1 = new Flight(1, "Madrid");
+        passenger1 = new Passenger("Jen");
+        passenger2 = new Passenger("Lola");
+        passenger3 = new Passenger("Ricky");
+        passenger4 = new Passenger("Dan");
+        passenger5 = new Passenger("Chuck");
     }
 
     @Test
@@ -65,16 +76,30 @@ public class AirportTest {
         assertEquals(0, airport1.getTicketsSold());
     }
 
+    @Test
+    public void canSellTicket(){
+        airport1.sellTicket(passenger1, flight1);
+        assertEquals(1, airport1.getTicketsSold());
+    }
+
 //    @Test
-//    public void canSellTicket(){
+//    public void numberOfPassengersBookedOnFlights(){
 //        airport1.sellTicket(passenger1, flight1);
-//        assertEquals(1, airport1.getTicketsSold());
+//        airport1.sellTicket(passenger2, flight1);
+//        airport1.sellTicket(passenger3, flight1);
+//        airport1.sellTicket(passenger4, flight2);
+//        airport1.sellTicket(passenger5, flight3);
+//        assertEquals(1, airport1.numberOfPassengersBookedOnFlights());
 //    }
 
     @Test
-    public void numberOfPassengersBookedOntoFlights(){
+    public void numberOfPassengersBookedOnFlights(){
         airport1.sellTicket(passenger1, flight1);
-        assertEquals(1, airport1.numberOfPassengersOnEachFlight());
+        airport1.sellTicket(passenger2, flight1);
+        airport1.sellTicket(passenger3, flight1);
+        airport1.sellTicket(passenger4, flight2);
+        airport1.sellTicket(passenger5, flight3);
+        assertEquals(5, airport1.checkPassengersBookedOnFlights());
     }
 
 }

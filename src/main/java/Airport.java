@@ -49,13 +49,26 @@ public class Airport {
         this.ticketsSold += 1;
     }
 
-    public ArrayList<Integer> numberOfPassengersOnEachFlight() {
-        ArrayList<Integer> array = null;
-        for (Hangar hangar : this.hangars) {
-            for (Plane plane : hangar.getPlanes()) {
-                array.add(plane.getPassengerCount());
-            }
+    public int checkPassengersBookedOnFlights() {
+        ArrayList<Integer> array;
+        new ArrayList<Integer>() = array;
+        for (Flight flight : this.flights){
+            return flight.getPassengerCount();
         }
-        return array;
+        return 
     }
+
+//    public int numberOfPassengersBookedOnFlights() {
+////        array = new ArrayList<>()
+////
+////        for (Hangar hangar : this.hangars) {
+////            for (Plane plane : hangar.getPlanes()) {
+////                array.add(plane.getPassengerCount());
+////            }
+////        }
+////        return array;
+////    }
+
+
+
 }
