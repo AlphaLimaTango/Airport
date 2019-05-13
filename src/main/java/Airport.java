@@ -55,18 +55,20 @@ public class Airport {
         for (Flight flight : this.flights){
             return flight.getPassengerCount();
         }
-        return 
+        return
     }
 
 //    public int numberOfPassengersBookedOnFlights() {
-////        array = new ArrayList<>()
+////  ArrayList<Integer>() array = new ArrayList<>(); (creating a local arraylist)
+
+//    int counter = 0;
 ////
 ////        for (Hangar hangar : this.hangars) {
 ////            for (Plane plane : hangar.getPlanes()) {
-////                array.add(plane.getPassengerCount());
+////                counter += plane.getPassengerCount();
 ////            }
 ////        }
-////        return array;
+////        return counter;
 ////    }
 
 
